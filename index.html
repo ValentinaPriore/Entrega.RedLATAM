@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI, Celac y Periodismo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="cursor.png">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600;700;800;900&family=Roboto:wght@100&display=swap"
+    rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600;700;800;900&family=Roboto:wght@100&display=swap');
+
+
+    p,
+    h4 {
+      font-family: 'Roboto Slab', sans-serif;
+    }
+
+    .white {
+      color: white;
+    }
+
+    .Big-Heroe {
+      background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(49, 58, 90) 70.2%);
+      width: 100%;
+      height: 100vh;
+      padding: 0px;
+      margin: 0px;
+      border-radius: 0px 0px 100px 100px;
+
+    }
+
+    .titulo {
+      width: 50%;
+    }
+
+    .flex0 {
+      flex-grow: 0 !important;
+    }
+
+    .card1 {
+      width: 100px;
+      height: 400px;
+      border-style: none;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+
+    .titulares {
+      visibility: hidden;
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
+    .card-body1 {
+
+      background-image: url(Disneylandia\ le\ digo\ Lacalle\ respondió\ a\ las\ declaraciones\ de\ Sergio\ Massa\ sobre\ Uruguay.jpg);
+      background-size: cover;
+      border-radius: 20px;
+
+    }
+
+    .card-body2 {
+      background-image: url(Lacalle\ Pou\ denunció\ la\ ideologización\ de\ la\ Celac\ y\ criticó\ la\ mirada\ de\ Massa\ sobre\ Uruguay\ Parece\ Disneylandia.jpg);
+      background-size: cover;
+      border-radius: 20px;
+
+
+    }
+
+    .card-body3 {
+      background-image: url(Lacalle\ Pou\ llamó\ a\ que\ la\ Celac\ no\ sea\ un\ “club\ de\ amigos\ ideológicos”.jpg);
+      background-size: cover;
+      border-radius: 20px;
+
+
+    }
+
+    .card-body4 {
+      background-image: url(Sergio\ Massa\ trató\ a\ Uruguay\ de\ hermano\ menor\,\ generó\ enojo\ y\ Lacalle\ Pou\ respondió\ con\ una\ ironía\ Parece\ Disneylandia.jpg);
+      background-size: cover;
+      border-radius: 20px;
+
+
+    }
+
+    .card-body5 {
+      background-image: url(Tensión.\ Lacalle\ Pou\ denunció\ la\ ideologización\ de\ la\ Celac\ y\ criticó\ la\ mirada\ de\ Massa\ sobre\ Uruguay\ Parece\ Disneylandia.jpg);
+      background-size: cover;
+      border-radius: 20px;
+
+
+    }
+
+    .card-body6 {
+      background-image: url(Qué\ quiso\ decir\ Lacalle\ Pou\ con\ Disneylandia\ como\ respuesta\ a\ los\ dichos\ de\ Sergio\ Massa.jpg);
+      background-size: cover;
+      border-radius: 20px;
+
+
+    }
+
+    .active {
+      min-width: 400px;
+      max-width: 900px;
+      width: calc(100% - 100px);
+      transition: 1s;
+    }
+
+    .active .titulares {
+      visibility: visible;
+      transition: 6s;
+      animation: titularesanimacion 1s;
+    }
+
+    .active .icon {
+      visibility: collapse;
+
+
+    }
+
+    .active:hover .icon .iconimg{
+      visibility: hidden;
+
+
+    }
+
+    .active .icon .iconimg {
+      visibility: collapse;
+
+
+    }
+
+    @keyframes titularesanimacion {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .iconimg {
+      visibility: hidden;
+    }
+
+    .card:hover .iconimg {
+      visibility: visible;
+    }
+
+    .card:focus {
+      min-width: 600px;
+      max-width: 900px;
+      width: calc(100% - 100px);
+      transition: 1s;
+    }
+
+    .card:focus {
+      min-width: 600px;
+      max-width: 900px;
+      width: calc(100% - 100px);
+      transition: 1s;
+    }
+
+    .col {
+      width: min-content;
+
+    }
+
+    .container1 {
+      display: grid !important;
+      justify-content: center !important;
+    }
+
+    img {
+      pointer-events: none
+    }
+
+    .apart {
+      background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(49, 58, 90) 70.2%);
+      width: 100%;
+      padding: 20px;
+    }
+
+    .mobile {
+      visibility: collapse;
+      height: 1px;
+    }
+
+    @media only screen and (max-width: 900px) {
+      .container1 {
+        visibility: collapse;
+        height: 1px !important;
+
+      }
+
+      .mobile {
+        visibility: visible;
+        height: auto;
+      }
+
+      .titulo {
+        width: 100%;
+      }
+
+      .titulares {
+        visibility: hidden;
+      }
+
+      .web{
+        visibility: hidden;
+        height: 1px;
+      }
+    }
+  </style>
+
+  <script>
+
+    function active(cardid) {
+      let cards = document.querySelectorAll(".card1")
+
+        for (let index = 0; index < cards.length; index++) {
+          
+          cards[index].classList.remove("active")
+        
+        }
+
+        let activecard = document.querySelector("#"+cardid)
+
+        activecard.classList.add("active")
+
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <div class="Big-Heroe row align-items-center">
+    <div class="container text-center">
+      <div class="row align-items-start">
+        <div class="col-md">
+          <img class="titulo" src="giphy.gif" alt="">
+        </div>
+        <div class="col-md-3">
+          <p class="white text-right">
+            Este martes fue la cumbre de la Celac en Buenos Aires. El discurso del presidente Luis Lacalle Pou fue
+            cubiertos por los medios más importantes del Uruguay.
+          </p>
+          <p class="white text-right ">
+            A partir de los titulares, le pedimos a la Inteligencia Artificial que cree cuatro imagenes que acompañen la
+            nota.
+          </p>
+          <br>
+          <p class="white " style="font-weight: 900;">
+            Estos fueron los resultados:
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 100px;"> </div>
+  <div>
+    <h4 class="web text-center" style="color:grey" class="text-center">Apretar para revelar las imagenes y los titulares</h4>
+  </div>
+  <div style="height: 50px;"> </div>
+
+  <div style="margin: auto;" class="container container1 text-center">
+    <div class="row">
+      <div class="col flex0">
+        <div id="Firstcard" onclick="active('Firstcard')" class="card card1">
+          <div class="card-body card-body1">
+            <div class="icon"
+              style="bottom: 20px; position: absolute; width: 50px; height: 50px; background-color: white; border-radius: 50%; margin: 5px;">
+              <img class="iconimg" style="width: 85%; margin: auto;" src="cursor.png" alt="">
+            </div>
+            <p class="white titulares text-left" style="bottom: 2px; position: absolute">"Disneylandia, le digo":
+              Lacalle respondió a las declaraciones de Sergio Massa sobre Uruguay</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col flex0">
+        <div id="Twocard" onclick="active('Twocard')"  class="card card1">
+          <div class="card-body card-body2">
+            <div class="icon"
+              style="bottom: 20px; position: absolute; width: 50px; height: 50px; background-color: white; border-radius: 50%; margin: 5px;">
+              <img class="iconimg" style="width: 85%; margin: auto;" src="cursor.png" alt="">
+            </div>
+            <p class="white titulares text-left" style="bottom: 2px; position: absolute">Lacalle Pou denunció la
+              "ideologización" de la Celac y criticó la mirada de Massa sobre Uruguay: "Parece Disneylandia"</p>
+          </div>
+        </div>
+      </div>
+      <div class="col flex0">
+        <div id="Threecard" onclick="active('Threecard')" class="card card1">
+          <div class="card-body card-body3">
+            <div class="icon"
+              style="bottom: 20px; position: absolute; width: 50px; height: 50px; background-color: white; border-radius: 50%; margin: 5px;">
+              <img class="iconimg" style="width: 85%; margin: auto;" src="cursor.png" alt="">
+            </div>
+            <p class="white titulares text-left" style="bottom: 2px; position: absolute">Lacalle Pou llamó a que la
+              Celac no sea un "club de amigos ideológicos"</p>
+          </div>
+        </div>
+      </div>
+      <div class="col flex0">
+        <div id="Fourcard" onclick="active('Fourcard')" class="card card1">
+          <div class="card-body card-body4">
+            <div class="icon"
+              style="bottom: 20px; position: absolute; width: 50px; height: 50px; background-color: white; border-radius: 50%; margin: 5px;">
+              <img class="iconimg" style="width: 85%; margin: auto;" src="cursor.png" alt="">
+            </div>
+            <p class="white titulares text-left" style="bottom: 2px; position: absolute">Sergio Massa trató a Uruguay de
+              hermano menor, generó enojo y Lacalle Pou respondió con una ironía: "Parece Disneylandia"</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col flex0">
+        <div id="Fivecard" onclick="active('Fivecard')" class="card card1">
+          <div class="card-body card-body5">
+            <div class="icon"
+              style="bottom: 20px; position: absolute; width: 50px; height: 50px; background-color: white; border-radius: 50%; margin: 5px;">
+              <img class="iconimg" style="width: 85%; margin: auto;" src="cursor.png" alt="">
+            </div>
+            <p class="white titulares text-left" style="bottom: 2px; position: absolute">Tensión. Lacalle Pou denunció
+              la ideologización de la Celac y criticó la mirada de Massa sobre Uruguay Parece Disneylandia</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col flex0">
+        <div id="Sixcard" onclick="active('Sixcard')" class="card card1">
+          <div class="card-body card-body6">
+            <div class="icon"
+              style="bottom: 20px; position: absolute; width: 50px; height: 50px; background-color: white; border-radius: 50%; margin: 5px;">
+              <img class="iconimg" style="width: 85%; margin: auto;" src="cursor.png" alt="">
+            </div>
+
+            <p class="white titulares text-left" style="bottom: 2px; position: absolute">¿Qué quiso decir Lacalle Pou
+              con Disneylandia como respuesta a los dichos de Sergio Massa?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- mobile -->
+  <div class="mobile"  style=" margin: 20px;">
+    <div style=" width: 97%; height: 400px; background-size: cover; background-image:  url(Disneylandia\ le\ digo\ Lacalle\ respondió\ a\ las\ declaraciones\ de\ Sergio\ Massa\ sobre\ Uruguay.jpg);">
+      <p class="white text-left" style="bottom: 2px; padding: 85% 0% 0% 15px; ">"Disneylandia, le digo": Lacalle respondió a las declaraciones de Sergio Massa sobre Uruguay</p>
+    </div>
+
+  </div>
+  <div class="mobile" style=" margin: 20px;">
+    <div style=" width: 97%; height: 400px; background-size: cover; background-image:  url(Lacalle\ Pou\ denunció\ la\ ideologización\ de\ la\ Celac\ y\ criticó\ la\ mirada\ de\ Massa\ sobre\ Uruguay\ Parece\ Disneylandia.jpg);">
+      <p class="white text-left" style="bottom: 2px; padding: 85% 0% 0% 15px; ">"Disneylandia, le digo": Lacalle respondió a las declaraciones de Sergio Massa sobre Uruguay</p>
+    </div>
+
+  </div>
+  <div class="mobile" style=" margin: 20px;">
+    <div style=" width: 97%; height: 400px; background-size: cover; background-image:  url(Lacalle\ Pou\ llamó\ a\ que\ la\ Celac\ no\ sea\ un\ “club\ de\ amigos\ ideológicos”.jpg);">
+      <p class="white text-left" style="bottom: 2px; padding: 85% 0% 0% 15px; ">"Disneylandia, le digo": Lacalle respondió a las declaraciones de Sergio Massa sobre Uruguay</p>
+    </div>
+
+  </div>
+  <div class="mobile" style=" margin: 20px;">
+    <div style=" width: 97%; height: 400px; background-size: cover; background-image:  url(Sergio\ Massa\ trató\ a\ Uruguay\ de\ hermano\ menor\,\ generó\ enojo\ y\ Lacalle\ Pou\ respondió\ con\ una\ ironía\ Parece\ Disneylandia.jpg);">
+      <p class="white text-left" style="bottom: 2px; padding: 85% 0% 0% 15px; ">"Disneylandia, le digo": Lacalle respondió a las declaraciones de Sergio Massa sobre Uruguay</p>
+    </div>
+
+  </div>
+  <div class="mobile" style=" margin: 20px;">
+    <div style=" width: 97%; height: 400px; background-size: cover; background-image:  url(Tensión.\ Lacalle\ Pou\ denunció\ la\ ideologización\ de\ la\ Celac\ y\ criticó\ la\ mirada\ de\ Massa\ sobre\ Uruguay\ Parece\ Disneylandia.jpg);">
+      <p class="white text-left" style="bottom: 2px; padding: 85% 0% 0% 15px; ">"Disneylandia, le digo": Lacalle respondió a las declaraciones de Sergio Massa sobre Uruguay</p>
+    </div>
+
+  </div>
+  <div class="mobile" style=" margin: 20px;">
+    <div style=" width: 97%; height: 400px; background-size: cover; background-image:  url(Qué\ quiso\ decir\ Lacalle\ Pou\ con\ Disneylandia\ como\ respuesta\ a\ los\ dichos\ de\ Sergio\ Massa.jpg);">
+      <p class="white text-left" style="bottom: 2px; padding: 85% 0% 0% 15px; ">"Disneylandia, le digo": Lacalle respondió a las declaraciones de Sergio Massa sobre Uruguay</p>
+    </div>
+
+  </div>
+ 
+
+
+
+ <!-- mobile end-->
+
+  <div style="height: 200px;"> </div>
+
+  <div class="apart">
+
+   
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md">
+          <h4 class="white"> Escuchá el discurso completo de Lacalle Pou:</h4>
+        </div>
+        <div class="col.md-2">
+          <a href="https://www.youtube.com/watch?v=-Is2R6ubWOc"><button type="button" class="btn btn-danger">Ver video</button></a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 200px;"> </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <h4>Cómo fue hecho</h4>
+          <p>
+            Tomé titulares de cuatro medos uruguayos y dos argentinos sobre los dichos del presidente Luis Lacalle Pou durante la jornada de la Cumbre de la Celac. Para la creación de las imágenes se utilizó Midjourney, un programa de inteligencia artificial. Las imágenes fueron elaboradas por la IA solo a partir del texto de los titulares. 
+          </p>
+          <br>
+          <p>
+            <h4>¿Es esto periodismo Dadá? </h4>
+              <p> La consigna del ejercicio era plantearnos una noticia desde un lugar diferente. En este caso, decidí que la cubre de la Celac era el tema del día. Pero, en lugar de contar los hechos, decidí jugar con cómo nos llega la noticia. ¿Qué están diciendo los medios? ¿A qué podemos acceder los lectores sobre la cumbre?</p>
+                <p>Además, esta entrega está fuertemente inspirada en las dos frases disparadoras de la consigna:</p>
+                  <p>"No estamos amenazados por un exceso de información sino por un exceso de insignificancia. Ya no existe un medio dominante, sino un ruido ensordecedor. (Jacques Ellul, Francia)"</p>
+                    <p>Lo que los medios necesitan actualmente, es carne y hueso. Para que los medios resuciten, no tienen más opción que volver a convertirse en seres vivos” Un periodista que pasa su tiempo reescribiendo comunicados de prensa merece ser reemplazado por un ordenador. (Uchida Tatsuru)                      </p>
+                      <p>¿Es esto periodismo Gaga? ¿Es esto periodismo Dada? Entrego este trabajo como un experimento sin conclusión.</p>
+        </div>
+        <div class="col-md">
+        
+                  <img style="width: 100%;" src="logo.png" alt="">      
+        </div>
+      </div>
+    </div>
+    <div style="height: 300px;"> </div>
+
+</body>
+
+</html>
